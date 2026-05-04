@@ -1,0 +1,3 @@
+[submodule "nvida-cuda"]
+	path = nvida-cuda
+	url = https://github.com/AJamesChen/nvida-cuda.git
