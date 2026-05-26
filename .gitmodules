@@ -1,6 +1,6 @@
 [submodule "cuda"]
 	path = cuda
-	url = https://github.com/AJamesChen/cuda.git
+	url = git@github.com:AJamesChen/cuda.git
 [submodule "python/codility"]
 	path = python/codility
 	url = git@github.com:AJamesChen/codility.git
