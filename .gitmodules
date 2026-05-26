@@ -1,6 +1,11 @@
-[submodule "python/codility"]
-	path = python/codility
-	url = git@github.com:AJamesChen/codility.git
+[submodule "cpp"]
+	path = cpp
+	url = git@github.com:AJamesChen/cpp.git
+
 [submodule "cuda"]
 	path = cuda
 	url = git@github.com:AJamesChen/cuda.git
+
+[submodule "python/codility"]
+	path = python/codility
+	url = git@github.com:AJamesChen/codility.git
