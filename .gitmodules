@@ -12,3 +12,6 @@
 [submodule "rust"]
 	path = rust
 	url = git@github.com:AJamesChen/rust.git
+[submodule "systems"]
+	path = systems
+	url = git@github.com:AJamesChen/systems.git
