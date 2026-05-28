@@ -15,3 +15,6 @@
 [submodule "systems"]
 	path = systems
 	url = git@github.com:AJamesChen/systems.git
+[submodule "embedded"]
+	path = embedded
+	url = git@github.com:AJamesChen/embedded.git
