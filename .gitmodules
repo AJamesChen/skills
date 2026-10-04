@@ -18,3 +18,6 @@
 [submodule "embedded"]
 	path = embedded
 	url = git@github.com:AJamesChen/embedded.git
+[submodule "yocto-platforms"]
+	path = yocto-platforms
+	url = git@github.com:AJamesChen/yocto-platforms.git
