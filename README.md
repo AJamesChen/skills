@@ -1,14 +1,29 @@
 # Technical Skills
 
-This repository is a hands-on portfolio of systems, C++, CUDA, Python, and Rust
-practice projects. The focus is practical engineering: build systems, automated
-tests, CI/CD, benchmarking, static analysis, and readable examples that explain
-the underlying tradeoffs.
+This repository is a hands-on portfolio of systems, C++, CUDA, Python, Rust,
+and embedded Linux practice projects. The focus is practical engineering:
+build systems, automated tests, CI/CD, benchmarking, static analysis, and
+readable examples that explain the underlying tradeoffs.
+
+## Clone the Repository
+
+Clone the repository and initialize all submodules:
+
+```sh
+git clone --recurse-submodules git@github.com:AJamesChen/skills.git
+```
+
+For an existing clone:
+
+```sh
+git submodule update --init --recursive
+```
 
 ## Project Map
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
+| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds using Kas, BitBake, pinned upstream revisions, custom layers, and bootable SD-card images. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
 | Rust | [rust](rust) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
@@ -17,6 +32,9 @@ the underlying tradeoffs.
 
 ## Highlighted Skills
 
+- **Embedded Linux and Yocto:** reproducible Raspberry Pi platform builds,
+  Kas manifests, BitBake, custom layers, pinned upstream revisions, and
+  bootable SD-card image generation.
 - **Linux systems programming:** `inotify`, file-descriptor based APIs, `poll`,
   POSIX process/runtime behavior, and custom/embedded Linux kernel requirements.
 - **C/C++ engineering:** CMake project structure, compiler warnings, sanitizers,
@@ -53,6 +71,7 @@ The projects use a deliberately small, standard toolchain:
 - clang-format and clang-tidy for C++ style and static analysis
 - Cargo, rustfmt, and Clippy for Rust
 - GitHub Actions for CI
+- Kas and BitBake for reproducible Yocto builds
 
 ## Repository Goals
 
