@@ -23,7 +23,7 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds using Kas, BitBake, pinned upstream revisions, custom layers, and bootable SD-card images. |
+| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B rootfs updates and U-Boot rollback. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
 | Rust | [rust](rust) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
@@ -33,8 +33,8 @@ git submodule update --init --recursive
 ## Highlighted Skills
 
 - **Embedded Linux and Yocto:** reproducible Raspberry Pi platform builds,
-  Kas manifests, BitBake, custom layers, pinned upstream revisions, and
-  bootable SD-card image generation.
+  Kas manifests, BitBake, custom layers, WIC partitioning, and RAUC A/B updates
+  with health checks and automatic rollback.
 - **Linux systems programming:** `inotify`, file-descriptor based APIs, `poll`,
   POSIX process/runtime behavior, and custom/embedded Linux kernel requirements.
 - **C/C++ engineering:** CMake project structure, compiler warnings, sanitizers,
@@ -71,7 +71,7 @@ The projects use a deliberately small, standard toolchain:
 - clang-format and clang-tidy for C++ style and static analysis
 - Cargo, rustfmt, and Clippy for Rust
 - GitHub Actions for CI
-- Kas and BitBake for reproducible Yocto builds
+- Kas, BitBake, RAUC, and U-Boot for reproducible images and OTA workflows
 
 ## Repository Goals
 
