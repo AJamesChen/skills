@@ -21,3 +21,6 @@
 [submodule "yocto-platforms"]
 	path = yocto-platforms
 	url = git@github.com:AJamesChen/yocto-platforms.git
+[submodule "device-web"]
+	path = device-web
+	url = git@github.com:AJamesChen/device-web.git
