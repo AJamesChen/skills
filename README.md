@@ -24,6 +24,7 @@ git submodule update --init --recursive
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
 | Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B rootfs updates and U-Boot rollback. |
+| Embedded device management | [device-web](device-web) | Authenticated Go dashboard for system information and drag-and-drop RAUC firmware updates. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
 | Rust | [rust](rust) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
@@ -35,6 +36,8 @@ git submodule update --init --recursive
 - **Embedded Linux and Yocto:** reproducible Raspberry Pi platform builds,
   Kas manifests, BitBake, custom layers, WIC partitioning, and RAUC A/B updates
   with health checks and automatic rollback.
+- **Embedded device management:** Go HTTP services, authenticated browser
+  sessions, system information, and streamed drag-and-drop firmware updates.
 - **Linux systems programming:** `inotify`, file-descriptor based APIs, `poll`,
   POSIX process/runtime behavior, and custom/embedded Linux kernel requirements.
 - **C/C++ engineering:** CMake project structure, compiler warnings, sanitizers,
