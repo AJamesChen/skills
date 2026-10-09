@@ -23,8 +23,8 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B rootfs updates and U-Boot rollback. |
-| Embedded device management | [device-web](device-web) | Authenticated Go dashboard for system information and drag-and-drop RAUC firmware updates. |
+| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, U-Boot rollback, and MFRC522 RFID support over SPI. |
+| Embedded device management | [device-web](device-web) | Authenticated Go dashboard for system information, drag-and-drop RAUC updates, installation feedback, and controlled reboot. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
 | Rust | [rust](rust) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
@@ -35,9 +35,11 @@ git submodule update --init --recursive
 
 - **Embedded Linux and Yocto:** reproducible Raspberry Pi platform builds,
   Kas manifests, BitBake, custom layers, WIC partitioning, and RAUC A/B updates
-  with health checks and automatic rollback.
+  with health checks and automatic rollback, plus device-tree overlays and
+  native C SPI/GPIO tooling for MFRC522 RFID bring-up.
 - **Embedded device management:** Go HTTP services, authenticated browser
-  sessions, system information, and streamed drag-and-drop firmware updates.
+  sessions, system information, streamed drag-and-drop firmware updates, and
+  orderly device reboot.
 - **Linux systems programming:** `inotify`, file-descriptor based APIs, `poll`,
   POSIX process/runtime behavior, and custom/embedded Linux kernel requirements.
 - **C/C++ engineering:** CMake project structure, compiler warnings, sanitizers,
@@ -74,7 +76,8 @@ The projects use a deliberately small, standard toolchain:
 - clang-format and clang-tidy for C++ style and static analysis
 - Cargo, rustfmt, and Clippy for Rust
 - GitHub Actions for CI
-- Kas, BitBake, RAUC, and U-Boot for reproducible images and OTA workflows
+- Kas, BitBake, RAUC, U-Boot, Linux SPI/GPIO interfaces, and device-tree
+  overlays for reproducible images, OTA workflows, and hardware bring-up
 
 ## Repository Goals
 
