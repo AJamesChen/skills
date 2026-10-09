@@ -23,7 +23,7 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, U-Boot rollback, and MFRC522 RFID support over SPI. |
+| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, U-Boot rollback, MFRC522 RFID over SPI, and HD44780 LCD bring-up with libgpiod. |
 | Embedded device management | [device-web](device-web) | Authenticated Go dashboard for system information, drag-and-drop RAUC updates, installation feedback, and controlled reboot. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
@@ -35,8 +35,8 @@ git submodule update --init --recursive
 
 - **Embedded Linux and Yocto:** reproducible Raspberry Pi platform builds,
   Kas manifests, BitBake, custom layers, WIC partitioning, and RAUC A/B updates
-  with health checks and automatic rollback, plus device-tree overlays and
-  native C SPI/GPIO tooling for MFRC522 RFID bring-up.
+  with health checks and automatic rollback, device-tree overlays, native C
+  SPI/GPIO tooling for MFRC522 RFID, and libgpiod-based HD44780 LCD bring-up.
 - **Embedded device management:** Go HTTP services, authenticated browser
   sessions, system information, streamed drag-and-drop firmware updates, and
   orderly device reboot.
@@ -76,8 +76,9 @@ The projects use a deliberately small, standard toolchain:
 - clang-format and clang-tidy for C++ style and static analysis
 - Cargo, rustfmt, and Clippy for Rust
 - GitHub Actions for CI
-- Kas, BitBake, RAUC, U-Boot, Linux SPI/GPIO interfaces, and device-tree
-  overlays for reproducible images, OTA workflows, and hardware bring-up
+- Kas, BitBake, RAUC, U-Boot, libgpiod, Linux SPI/GPIO interfaces, and
+  device-tree overlays for reproducible images, OTA workflows, and hardware
+  bring-up
 
 ## Repository Goals
 
