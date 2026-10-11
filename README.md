@@ -23,8 +23,8 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals, and V4L2/GStreamer camera support. |
-| Embedded device management | [device-web](device-web) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, and live camera playback through selectable V4L2 or GStreamer backends. |
+| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals, and V4L2/GStreamer camera support with a configurable text OSD. |
+| Embedded device management | [device-web](device-web) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live camera playback, snapshots, and persistent top-right OSD settings. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
 | Rust | [rust](rust) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
@@ -42,8 +42,9 @@ git submodule update --init --recursive
 - **Embedded device management:** Go HTTP services, authenticated browser
   sessions, system information, streamed drag-and-drop firmware updates, and
   orderly device reboot, with authenticated REST endpoints for MJPEG playback,
-  stopping capture, and JPEG snapshots, with visible OTA upload/install
-  progress and selectable V4L2/GStreamer capture.
+  stopping capture, JPEG snapshots, and persistent GStreamer `textoverlay`
+  settings, with visible OTA upload/install progress and selectable
+  V4L2/GStreamer capture.
 - **Linux systems programming:** `inotify`, file-descriptor based APIs, `poll`,
   POSIX process/runtime behavior, and custom/embedded Linux kernel requirements.
 - **C/C++ engineering:** CMake project structure, compiler warnings, sanitizers,
