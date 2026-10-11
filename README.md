@@ -23,8 +23,8 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, U-Boot rollback, MFRC522 RFID over SPI, and a 4x4 matrix keypad driving an HD44780 LCD through libgpiod. |
-| Embedded device management | [device-web](device-web) | Authenticated Go dashboard for system information, drag-and-drop RAUC updates, installation feedback, and controlled reboot. |
+| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, U-Boot rollback, MFRC522 RFID, GPIO peripherals, and legacy V4L2 camera support. |
+| Embedded device management | [device-web](device-web) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live MJPEG camera playback, and JPEG snapshots. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
 | Rust | [rust](rust) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
@@ -37,10 +37,11 @@ git submodule update --init --recursive
   Kas manifests, BitBake, custom layers, WIC partitioning, and RAUC A/B updates
   with health checks and automatic rollback, device-tree overlays, native C
   SPI/GPIO tooling for MFRC522 RFID, and a debounced 4x4 matrix keypad/HD44780
-  display service built on libgpiod.
+  display service built on libgpiod, plus legacy `bcm2835-v4l2` camera bring-up.
 - **Embedded device management:** Go HTTP services, authenticated browser
   sessions, system information, streamed drag-and-drop firmware updates, and
-  orderly device reboot.
+  orderly device reboot, with authenticated REST endpoints for MJPEG playback,
+  stopping capture, and JPEG snapshots.
 - **Linux systems programming:** `inotify`, file-descriptor based APIs, `poll`,
   POSIX process/runtime behavior, and custom/embedded Linux kernel requirements.
 - **C/C++ engineering:** CMake project structure, compiler warnings, sanitizers,
