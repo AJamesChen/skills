@@ -23,13 +23,13 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals including a ULN2003A stepper driver and direction/speed test harness, and V4L2/GStreamer camera support with a configurable text OSD. |
-| Embedded device management | [device-web](device-web) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live camera playback, snapshots, and persistent top-right OSD settings. |
-| Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
-| Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
-| Rust | [rust](rust) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
-| Python | [python/codility](python/codility) | Algorithm practice across arrays, sorting, stacks, prefix sums, leaders, slices, and related Codility exercises. |
-| CUDA | [cuda](cuda) | CUDA/GPU programming practice area. |
+| Embedded Linux and Yocto | [yocto-platforms](https://github.com/AJamesChen/yocto-platforms/tree/f161f465919c129a75d8bc381764621aa0f62191) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals including a ULN2003A stepper driver and direction/speed test harness, and V4L2/GStreamer camera support with a configurable text OSD. |
+| Embedded device management | [device-web](https://github.com/AJamesChen/device-web/tree/48d63747ea04485115a27fb10eba5d7df9c2ea73) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live camera playback, snapshots, and persistent top-right OSD settings. |
+| Linux systems programming | [systems](https://github.com/AJamesChen/systems/tree/b2c61ec151dfd77848212030cf86b0d6a81243c2) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
+| Modern C++ | [cpp](https://github.com/AJamesChen/cpp/tree/892646b85664d5a1af4065bf92f0f1fdddc8ac26) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
+| Rust | [rust](https://github.com/AJamesChen/rust/tree/42a45966d02ebb5c08d9806d91d3af41106018f7) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
+| Python | [python/codility](https://github.com/AJamesChen/codility/tree/346c0579742d2375fd03b9e07dd5b01a86507a65) | Algorithm practice across arrays, sorting, stacks, prefix sums, leaders, slices, and related Codility exercises. |
+| CUDA | [cuda](https://github.com/AJamesChen/cuda/tree/570ecf0a2a16764ea04503463196f27493625205) | CUDA/GPU programming practice area. |
 
 ## Highlighted Skills
 
@@ -40,7 +40,7 @@ git submodule update --init --recursive
   display service built on libgpiod, plus legacy `bcm2835-v4l2` and GStreamer
   camera bring-up. The ULN2003A addition provides a device-tree-bound kernel
   driver, a terminal direction/speed harness, and a verified RAUC deployment;
-  see the [stepper documentation](yocto-platforms/docs/uln2003a.md).
+  see the [stepper documentation](https://github.com/AJamesChen/yocto-platforms/blob/f161f465919c129a75d8bc381764621aa0f62191/docs/uln2003a.md).
 - **Embedded device management:** Go HTTP services, authenticated browser
   sessions, system information, streamed drag-and-drop firmware updates, and
   orderly device reboot, with authenticated REST endpoints for MJPEG playback,
@@ -64,7 +64,7 @@ git submodule update --init --recursive
 ## Featured Example
 
 The first Linux systems example is an
-[inotify file watcher](systems/linux/inotify). It includes:
+[inotify file watcher](https://github.com/AJamesChen/systems/tree/b2c61ec151dfd77848212030cf86b0d6a81243c2/linux/inotify). It includes:
 
 - A small reusable C wrapper around `inotify_init1`, `inotify_add_watch`, and
   batched event dispatch
