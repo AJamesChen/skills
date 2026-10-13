@@ -23,7 +23,7 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals, and V4L2/GStreamer camera support with a configurable text OSD. |
+| Embedded Linux and Yocto | [yocto-platforms](yocto-platforms) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals including a ULN2003A stepper driver and direction/speed test harness, and V4L2/GStreamer camera support with a configurable text OSD. |
 | Embedded device management | [device-web](device-web) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live camera playback, snapshots, and persistent top-right OSD settings. |
 | Linux systems programming | [systems](systems) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](cpp) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
@@ -38,7 +38,9 @@ git submodule update --init --recursive
   with health checks and automatic rollback, device-tree overlays, native C
   SPI/GPIO tooling for MFRC522 RFID, and a debounced 4x4 matrix keypad/HD44780
   display service built on libgpiod, plus legacy `bcm2835-v4l2` and GStreamer
-  camera bring-up.
+  camera bring-up. The ULN2003A addition provides a device-tree-bound kernel
+  driver, a terminal direction/speed harness, and a verified RAUC deployment;
+  see the [stepper documentation](yocto-platforms/docs/uln2003a.md).
 - **Embedded device management:** Go HTTP services, authenticated browser
   sessions, system information, streamed drag-and-drop firmware updates, and
   orderly device reboot, with authenticated REST endpoints for MJPEG playback,
