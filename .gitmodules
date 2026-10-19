@@ -24,3 +24,6 @@
 [submodule "device-web"]
 	path = device-web
 	url = git@github.com:AJamesChen/device-web.git
+[submodule "thunderboard-environment"]
+	path = thunderboard-environment
+	url = git@github.com:AJamesChen/thunderboard-environment.git
