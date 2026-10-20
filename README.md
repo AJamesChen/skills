@@ -25,7 +25,7 @@ git submodule update --init --recursive
 | --- | --- | --- |
 | Embedded Linux and Yocto | [yocto-platforms](https://github.com/AJamesChen/yocto-platforms/tree/f161f465919c129a75d8bc381764621aa0f62191) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals including a ULN2003A stepper driver and direction/speed test harness, and V4L2/GStreamer camera support with a configurable text OSD. |
 | Embedded device management | [device-web](https://github.com/AJamesChen/device-web/tree/48d63747ea04485115a27fb10eba5d7df9c2ea73) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live camera playback, snapshots, and persistent top-right OSD settings. |
-| Bluetooth LE and Android | [thunderboard-environment](https://github.com/AJamesChen/thunderboard-environment/tree/3245e81a316a88e84b5b567083db7f4143d6a1ef) | Thunderboard BG22 temperature and humidity firmware, a native Android monitor with configurable reporting periods, and experimental staged application OTA with package validation and firmware version confirmation. |
+| Bluetooth LE and Android | [thunderboard-environment](https://github.com/AJamesChen/thunderboard-environment/tree/47474581e7d5f988bee8074d06aec2c7fd7afabd) | James's Thunderboard BG22 sensor firmware and Kotlin Android app for Pixel 7, with live readings and session history, reporting settings, a documented Monitor design, and experimental OTA with package validation and version confirmation. |
 | Linux systems programming | [systems](https://github.com/AJamesChen/systems/tree/b2c61ec151dfd77848212030cf86b0d6a81243c2) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
 | Modern C++ | [cpp](https://github.com/AJamesChen/cpp/tree/892646b85664d5a1af4065bf92f0f1fdddc8ac26) | CMake, GoogleTest, clang-format, clang-tidy, benchmarks, algorithm implementation, and GitHub Actions workflows. |
 | Rust | [rust](https://github.com/AJamesChen/rust/tree/42a45966d02ebb5c08d9806d91d3af41106018f7) | Cargo workspace layout, Rust 2024, unit tests, formatting, Clippy, and CI for library-style exercises. |
@@ -52,7 +52,10 @@ git submodule update --init --recursive
   POSIX process/runtime behavior, and custom/embedded Linux kernel requirements.
 - **Bluetooth LE and Android:** Si7021 sensor integration, standard Environmental
   Sensing characteristics, notification subscriptions, serialized Android GATT
-  operations, and application firmware updates through a Gecko bootloader.
+  operations, a Kotlin monitor with live history and reporting settings, and
+  application firmware updates through a Gecko bootloader. The
+  [Thunderboard project guide](https://github.com/AJamesChen/thunderboard-environment/blob/47474581e7d5f988bee8074d06aec2c7fd7afabd/README.md)
+  includes the supplied main-screen design reference and Pixel 7 testing steps.
 - **C/C++ engineering:** CMake project structure, compiler warnings, sanitizers,
   GoogleTest, CTest, clang-format, clang-tidy, and benchmark targets.
 - **Concurrency and performance foundations:** low-level API design,
