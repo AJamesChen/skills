@@ -23,7 +23,7 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](https://github.com/AJamesChen/yocto-platforms/tree/f161f465919c129a75d8bc381764621aa0f62191) | Reproducible Raspberry Pi 4B Yocto builds with signed RAUC A/B updates, visible OTA progress, U-Boot rollback, GPIO peripherals including a ULN2003A stepper driver and direction/speed test harness, and V4L2/GStreamer camera support with a configurable text OSD. |
+| Embedded Linux and Yocto | [yocto-platforms](https://github.com/AJamesChen/yocto-platforms/tree/da809deb2d11d2f7e3f0ddda766d53c768f27421) | Reproducible Raspberry Pi 4B builds with signed RAUC A/B updates, plus Jetson Orin Nano builds for Jetson Linux R39.2.1 with Mender A/B integration, wired DHCP/SSH, and a readable 1080p console on 4K DisplayPort monitors. |
 | Embedded device management | [device-web](https://github.com/AJamesChen/device-web/tree/48d63747ea04485115a27fb10eba5d7df9c2ea73) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live camera playback, snapshots, and persistent top-right OSD settings. |
 | Bluetooth LE and Android | [thunderboard-environment](https://github.com/AJamesChen/thunderboard-environment/tree/47474581e7d5f988bee8074d06aec2c7fd7afabd) | James's Thunderboard BG22 sensor firmware and Kotlin Android app for Pixel 7, with live readings and session history, reporting settings, a documented Monitor design, and experimental OTA with package validation and version confirmation. |
 | Linux systems programming | [systems](https://github.com/AJamesChen/systems/tree/b2c61ec151dfd77848212030cf86b0d6a81243c2) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
@@ -34,14 +34,18 @@ git submodule update --init --recursive
 
 ## Highlighted Skills
 
-- **Embedded Linux and Yocto:** reproducible Raspberry Pi platform builds,
-  Kas manifests, BitBake, custom layers, WIC partitioning, and RAUC A/B updates
-  with health checks and automatic rollback, device-tree overlays, native C
+- **Embedded Linux and Yocto:** reproducible Raspberry Pi and Jetson Orin Nano
+  platform builds; Kas for Raspberry Pi and Android `repo` manifests with
+  `TEMPLATECONF` for Jetson; BitBake, custom layers, WIC partitioning, signed
+  RAUC A/B updates with health checks and rollback, Mender classic A/B
+  integration with Tegra boot control, device-tree overlays, native C
   SPI/GPIO tooling for MFRC522 RFID, and a debounced 4x4 matrix keypad/HD44780
   display service built on libgpiod, plus legacy `bcm2835-v4l2` and GStreamer
-  camera bring-up. The ULN2003A addition provides a device-tree-bound kernel
-  driver, a terminal direction/speed harness, and a verified RAUC deployment;
-  see the [stepper documentation](https://github.com/AJamesChen/yocto-platforms/blob/f161f465919c129a75d8bc381764621aa0f62191/docs/uln2003a.md).
+  camera bring-up. The Orin Nano image targets L4T R39.2.1 and configures DHCP
+  for wired SSH and a 1080p DisplayPort console. The ULN2003A addition provides
+  a device-tree-bound kernel driver, a terminal direction/speed harness, and a
+  verified RAUC deployment;
+  see the [stepper documentation](https://github.com/AJamesChen/yocto-platforms/blob/da809deb2d11d2f7e3f0ddda766d53c768f27421/docs/uln2003a.md).
 - **Embedded device management:** Go HTTP services, authenticated browser
   sessions, system information, streamed drag-and-drop firmware updates, and
   orderly device reboot, with authenticated REST endpoints for MJPEG playback,
@@ -90,9 +94,9 @@ The projects use a deliberately small, standard toolchain:
 - clang-format and clang-tidy for C++ style and static analysis
 - Cargo, rustfmt, and Clippy for Rust
 - GitHub Actions for CI
-- Kas, BitBake, RAUC, U-Boot, libgpiod, Linux SPI/GPIO interfaces, and
-  device-tree overlays for reproducible images, OTA workflows, and hardware
-  bring-up
+- Kas, Android `repo`, BitBake, RAUC, Mender, U-Boot, `meta-tegra`, libgpiod,
+  Linux SPI/GPIO interfaces, and device-tree overlays for reproducible images,
+  OTA workflows, and hardware bring-up
 
 ## Repository Goals
 
