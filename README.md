@@ -23,7 +23,7 @@ git submodule update --init --recursive
 
 | Area | Project | What it demonstrates |
 | --- | --- | --- |
-| Embedded Linux and Yocto | [yocto-platforms](https://github.com/AJamesChen/yocto-platforms/tree/a849b9b845249c54f620764a7ac071f55a9e7576) | Reproducible Raspberry Pi 4B builds with signed RAUC A/B updates, plus Jetson Orin Nano builds for Jetson Linux R39.2.1 with Mender A/B integration, wired DHCP/SSH, readable 1080p console, and dual IMX219 CSI preview with disparity visualization. |
+| Embedded Linux and Yocto | [yocto-platforms](https://github.com/AJamesChen/yocto-platforms/tree/d6ae9f6) | Reproducible Raspberry Pi 4B builds with signed RAUC A/B updates, plus Jetson Orin Nano builds for Jetson Linux R39.2.1 with Mender A/B integration, wired DHCP/SSH, readable 1080p console, and dual IMX219 CSI preview with disparity visualization. |
 | Embedded device management | [device-web](https://github.com/AJamesChen/device-web/tree/48d63747ea04485115a27fb10eba5d7df9c2ea73) | Authenticated Go dashboard and REST API for system information, RAUC updates, controlled reboot, live camera playback, snapshots, and persistent top-right OSD settings. |
 | Bluetooth LE and Android | [thunderboard-environment](https://github.com/AJamesChen/thunderboard-environment/tree/47474581e7d5f988bee8074d06aec2c7fd7afabd) | James's Thunderboard BG22 sensor firmware and Kotlin Android app for Pixel 7, with live readings and session history, reporting settings, a documented Monitor design, and experimental OTA with package validation and version confirmation. |
 | Linux systems programming | [systems](https://github.com/AJamesChen/systems/tree/b2c61ec151dfd77848212030cf86b0d6a81243c2) | CMake-based C examples for Linux APIs, unit testing, sanitizer-enabled CI, and embedded/custom kernel considerations. |
@@ -44,12 +44,14 @@ git submodule update --init --recursive
   camera bring-up. The Orin Nano image targets L4T R39.2.1, configures DHCP for
   wired SSH and a 1080p DisplayPort console, and enables NVIDIA's dual IMX219
   device-tree overlay, sensor driver, and a headless web preview for both feeds
-  and relative disparity. See the [dual IMX219 camera
-  guide](https://github.com/AJamesChen/yocto-platforms/blob/a849b9b845249c54f620764a7ac071f55a9e7576/docs/jetson-imx219-dual-camera.md).
+  and relative disparity. Initial A/B provisioning documents the QSPI recovery
+  flash and host-side SD-card writer. See the [dual IMX219 camera
+  guide](https://github.com/AJamesChen/yocto-platforms/blob/d6ae9f6/docs/jetson-imx219-dual-camera.md)
+  and [Orin Nano provisioning instructions](https://github.com/AJamesChen/yocto-platforms/blob/d6ae9f6/README.md).
   The ULN2003A addition provides
   a device-tree-bound kernel driver, a terminal direction/speed harness, and a
   verified RAUC deployment;
-  see the [stepper documentation](https://github.com/AJamesChen/yocto-platforms/blob/a849b9b845249c54f620764a7ac071f55a9e7576/docs/uln2003a.md).
+  see the [stepper documentation](https://github.com/AJamesChen/yocto-platforms/blob/d6ae9f6/docs/uln2003a.md).
 - **Embedded device management:** Go HTTP services, authenticated browser
   sessions, system information, streamed drag-and-drop firmware updates, and
   orderly device reboot, with authenticated REST endpoints for MJPEG playback,
